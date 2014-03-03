@@ -50,7 +50,7 @@ public class HttpResponseHandler {
         final int what = msg.what;
         switch (what) {
             case SUCCESS:
-                handlSuccessMessage(msg);
+                handleSuccessMessage(msg);
                 break;
             case FAILURE:
                 callback.onFailure((Throwable) msg.obj);
@@ -64,7 +64,7 @@ public class HttpResponseHandler {
         }
     }
 
-    private void handlSuccessMessage(Message msg) {
+    private void handleSuccessMessage(Message msg) {
         List response = (List) msg.obj;
         int statusCode = ((Integer) response.get(0)).intValue();
         Header[] headers = (Header[]) response.get(1);

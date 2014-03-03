@@ -1,6 +1,5 @@
 package com.android.common.http;
 
-import com.android.common.bind.constant.ResultType;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
